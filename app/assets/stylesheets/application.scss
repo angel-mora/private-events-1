@@ -12,3 +12,28 @@
 
  */
  @import "bootstrap";
+.form_signin {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .form_signin .form_control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .form_signin .form_control:focus {
+    z-index: 2;
+  }
+
+  .form_signin input[type="text"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+  }
