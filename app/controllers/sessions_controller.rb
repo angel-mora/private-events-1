@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
         if user 
             session[:user_id] = user.id 
-            redirect_to users_path, notice: 'Logged in'
+            redirect_to user_path(user), notice: 'Logged in'
         else
             flash.now[:alert] = 'email does not exist'
             render :new 

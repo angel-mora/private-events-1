@@ -1,0 +1,63 @@
+<div class="container-fluid">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+    <h2>User Datails:</h2>  
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @this_user.first_name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @this_user.username %> 
+</p>
+
+<br>
+<p>
+    <h3>Created Events:</h3>
+  </p>
+<% @events.each do |event| %>
+  
+  <p>
+    <strong>Description:</strong>
+    <%= event.description %>
+  </p>
+  <p>
+    <strong>Date</strong>
+    <%= event.date_time %>
+  </p>
+  <%= link_to 'Show Event', event_path(event) %><br>
+
+<% end %>
+<hr>
+<p>
+  <h3>Upcoming Events to Attend</h3>
+  <% if @upcoming_events %>
+  <% @upcoming_events.each do |event| %>
+    Event: <%= event.description %>
+    Event Date: <%= event.date_time %>
+  <% end %>
+  <% else %> 
+  <%= 'NO UPCOMING EVENTS'%>
+  <% end %>
+</p>
+<hr>
+
+<p>
+  <h3>Past Attended Events</h3>
+  <% @past_events.each do |event| %>
+    Event: <%= event.description %>
+    Event Date: <%= event.date_time %>
+  <% end %>
+</p>
+
+
+
+<% if already_logged_in? && current_user == @this_user %>
+  <%= link_to 'Edit', edit_user_path(@this_user) %>
+<% end %>
+ </div>

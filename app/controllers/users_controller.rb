@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
     
     def index
-        @this_user = User.find(session[:user_id])
     end
     
     def new
@@ -24,7 +23,11 @@ class UsersController < ApplicationController
     end
 
     def show
-        @all_user = User.all
+        @this_user = User.find(session[:user_id])
+        @events = @this_user.events
+        @attended_events = @this_user.attended_events 
+        @upcomming_events = @this_user.attended_events.upcoming
+        @past_events = @this_user.events.past
     end
 
     private  
