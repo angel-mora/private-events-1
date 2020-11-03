@@ -1,2 +1,11 @@
 module ApplicationHelper
+    def top_links
+         if session[:user_id]
+            ("<a class=\"menu-item\" href=\"#\"> #{current_user.first_name} </a>
+             <a class=\"menu-item\" href=\"/logout\">Logout  </a>").html_safe
+         else 
+            ("<a class=\"menu-item\" href=\"login\"> Login </a>
+            <a class=\"menu-item\" href=\"/sign_up\">Create account  </a>").html_safe  
+         end
+    end
 end

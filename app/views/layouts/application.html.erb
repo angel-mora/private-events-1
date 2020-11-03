@@ -7,24 +7,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-  <div> 
+ 
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"> Private Events </a>
+  <a class="navbar-brand" href="#"> <b>&nbsp;&nbsp;PRIVATE EVENTS</b> </a>
   
  
     
         <div class="menu">
-          <a class="menu-item" href="#">Login </a>
-          <a class="menu-item" href="#">Create account  </a>
-          <a class="menu-item" href="#"> &nbsp;</a>
+        <%= top_links %>
+          
+          <a class="menu-item" href="#"> &nbsp; </a>
         </div>
      
  
 </nav>
     <%= yield %>
-  </div>  
+ 
   </body>
 </html>

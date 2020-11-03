@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+    
+    def index
+        @this_user = User.find(session[:user_id])
+    end
+    
     def new
         @user = User.new
     end

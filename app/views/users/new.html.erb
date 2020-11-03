@@ -1,25 +1,15 @@
 
-
-<%= form_with class: :form_signin, model: @user do |form|%>
+<div class="row">
+<div class="col-md-6 offset-md-3 mt-5">
+<%= form_with id: 'create-user-form', model: @user do |form|%>
 <h1> Create account </h1>
-<p>
-<%= form.label :username%> <br/>
-<%= form.text_field :username%>
-</p>
-<p>
-<%= form.label :first_name%><br/>
-<%= form.text_field :first_name%>
-</p>
-<p>
-<%= form.label :last_name%><br/>
-<%= form.text_field :last_name%>
-</p>
-<p>
-<%= form.label :email%><br/>
-<%= form.text_field :email%>
-</p>
-<p>
-<%= form.submit%><br/>
-
-</p>
+ 
+<%= form.text_field :username, placeholder: 'Enter a chosen Username'%>
+<%= form.text_field :first_name, placeholder: 'Enter first name'%>
+<%= form.text_field :last_name, placeholder: 'Enter a last name'%>
+<%= form.text_field :email, placeholder: 'Enter your email'%>
+<%= form.submit class:'btn btn-primary mt-3' %><br/>
 <% end %>
+
+</div>
+</div>
