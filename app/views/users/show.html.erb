@@ -34,30 +34,42 @@
 
 <% end %>
 <hr>
-<p>
-  <h3>Upcoming Events to Attend</h3>
-  <% if @upcoming_events %>
-  <% @upcoming_events.each do |event| %>
-    Event: <%= event.description %>
-    Event Date: <%= event.date_time %>
+ 
+
+<div>
+  <h1>Upcoming Events</h1>
+  <div class="grid-container">
+
+  <% @upcoming_events.each do |event| %> 
+  <div class="grid-item">
+    <p> <%= event.description %> </p>
+    <p>Date: <%= event.date_time %> </p>
+  </div>
   <% end %>
-  <% else %> 
-  <%= 'NO UPCOMING EVENTS'%>
-  <% end %>
-</p>
+  
+  </div>
+</div>
+
 <hr>
 
-<p>
-  <h3>Past Attended Events</h3>
-  <% @past_events.each do |event| %>
-    Event: <%= event.description %>
-    Event Date: <%= event.date_time %>
+<div>
+  <h1>Past Events</h1>
+  <div class="grid-container">
+
+  <% @past_events.each do |event| %> 
+  <div class="grid-item">
+    <p> <%= event.description %> </p>
+    <p>Date: <%= event.date_time %> </p>
+  </div>
   <% end %>
-</p>
+  
+  </div>
+</div>
 
 
 
 <% if already_logged_in? && current_user == @this_user %>
   <%= link_to 'Edit', edit_user_path(@this_user) %>
 <% end %>
+
  </div>

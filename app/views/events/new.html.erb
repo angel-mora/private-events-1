@@ -1,0 +1,11 @@
+<div class="row">
+<div class="col-md-6 offset-md-3 mt-5">
+<%= form_with id: 'create-user-form', model: @event do |form|%>
+<h1> Create event </h1>
+<%= form.text_field :title, placeholder: 'Enter title of event' %>
+<%= form.text_field :description, placeholder: 'Enter description of event'%>
+<%= form.submit class:'btn btn-primary mt-3' %><br/>
+<% end %>
+
+</div>
+</div>

@@ -26,7 +26,7 @@ class UsersController < ApplicationController
         @this_user = User.find(session[:user_id])
         @events = @this_user.events
         @attended_events = @this_user.attended_events 
-        @upcomming_events = @this_user.attended_events.upcoming
+        @upcoming_events = @this_user.events.upcoming
         @past_events = @this_user.events.past
     end
 
