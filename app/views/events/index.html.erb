@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class = "text-center">Events</h1>
+<h3 class = "text-center">Upcoming Events</h3>
+
+<div class = "row">
+    
+    <% @upcoming_events.each do |event| %>
+      <div class = "col-md-3 mt-3 mb-3">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Event Title: <%= event.title %></h5>
+              <p class="card-text">Event: <%= event.description %></p>
+              <p>Event Date: <%= event.date_time %></p>
+            </div>
+            <div class="card-footer">
+              <%= link_to 'Attend this event', { :controller => 'events', :action => 'attend_event', :id => event.id }, method: :post, class: 'btn btn-default'%>
+              <%= link_to 'Show', event, class: "btn btn-default" %>
+            </div>
+          </div>
+        </div> 
+    </div>
+    <% end %> 
+
+</div>
+<hr>
+<h3 class = "text-center">Past Events</h3>
+<div class = "row">
+    
+    <% @past_events.each do |event| %>
+      <div class = "col-md-3 mt-3 mb-3">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Event Title: <%= event.title %></h5>
+              <p class="card-text">Event: <%= event.description %></p>
+              <p>Event Date: <%= event.date_time %></p>
+            </div>
+            <div class="card-footer">
+              <%= link_to 'Show', event, class: "btn btn-default" %>
+            </div>
+          </div>
+        </div> 
+    </div>
+    <% end %> 
+
+</div>
