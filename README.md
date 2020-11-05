@@ -27,7 +27,7 @@ cd private-events
 ```
 3. Check out the working branch
 ```console
-git checkout feature_one
+git checkout modeling
 ```
 4. run bundle to install all gems
 ```console
