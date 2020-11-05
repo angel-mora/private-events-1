@@ -13,69 +13,68 @@
  */
  @import "bootstrap";
 
- .menu-item {
-   color: #fff;
-   text-decoration: none;
-   font-weight: bold;
-   margin: 0 15px;
-  }
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+}
 
-  .menu-item:hover {
-    color: #fff;
-    text-decoration: underline;
-    font-weight: bold;
-    margin: 0 15px;
-   }
+.menu-item:hover {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  margin: 0 15px;
+}
 
-   #login-form input[type=text],
-   #create-user-form input[type=text],
-   #create-user-form textarea {
-    width: 100%;
-    padding: 10px 6px;
-    border: solid 1px #ccc;
-  }
+#login-form input[type=text],
+#create-user-form input[type=text],
+#create-user-form textarea {
+  width: 100%;
+  padding: 10px 6px;
+  border: solid 1px #ccc;
+}
 
-  #session_controls {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-  
-  }
+#session_controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
 
-  .grid-container {
-    display: inline-grid;
-    grid-column-gap: 20px;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-  }
+.grid-container {
+  display: inline-grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
 
-  .grid-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 
-  .events_users {
-    width: 200px;
-  }
+.events_users {
+  width: 200px;
+}
 
-  .add_event {
-    color: #fff;
-    padding-top: 10px;
-    line-height: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    position: fixed;
-    top: 60px;
-    right: 30px;
-    background-color: #0d6efd;
-    text-align: center;
-  }
+.add_event {
+  color: #fff;
+  padding-top: 10px;
+  line-height: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  background-color: #0d6efd;
+  text-align: center;
+}
 
-  .add_event:hover {
-    color: #fff;
-  }
+.add_event:hover {
+  color: #fff;
+}
