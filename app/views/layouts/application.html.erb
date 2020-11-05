@@ -25,6 +25,6 @@
  
 </nav>
     <%= yield %>
- <%= add_event_btn %>
+ <%= add_event_btn if already_logged_in?%>
   </body>
 </html>

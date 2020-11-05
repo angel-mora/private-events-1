@@ -12,8 +12,6 @@ module ApplicationHelper
   end
 
   def add_event_btn
-    if !current_page?(new_event_path) && already_logged_in?
-      '<a class="add_event" href="/events/new"> ADD EVENT</a>'.html_safe
-    end
+    '<a class="add_event" href="/events/new"> ADD EVENT</a>'.html_safe unless current_page?(new_event_path)
   end
 end
