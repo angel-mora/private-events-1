@@ -33,12 +33,6 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should update event' do
-    patch event_url(@event), params: { event: { name: @event.title, date: @event.date_time,
-                                                description: @event.description } }
-    assert_redirected_to event_url(@event)
-  end
-
   test 'should destroy event' do
     assert_difference('Event.count', -1) do
       delete event_url(@event)
