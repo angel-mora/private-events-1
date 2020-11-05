@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @new_user, notice: 'Acount creation was successfull' }
         format.json { render :show, status: :created, location: @user }
       else
-        format.html { render : new }
+        format.html { render :new }
         format.json { render json: @new_user.errors, status: unprocessable_entity }
       end
     end
