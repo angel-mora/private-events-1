@@ -19,7 +19,7 @@ rails version 5.2.3
 ### Setup
 1. Clone the project
 ```console
-git clone git@github.com:oloomoses/private-events.git
+git clone git@github.com:gabrie-lhilarion/private-events.git
 ```
 2. Go to the project folder
 ```console
