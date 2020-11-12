@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-   before_action :already_logged_in?, only:[:show, :edit, :update, :destroy ]
+  before_action :already_logged_in?, only: %i[show edit update destroy]
 
   def index
     @all_users = User.all
