@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
 
   def require_login
     redirect_to root_path unless already_logged_in?
-    flash[:notice] = 'You must be logged in to continue'
   end
 
   def already_attendee?
