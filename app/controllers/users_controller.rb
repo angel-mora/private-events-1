@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+   before_action :already_logged_in?, only:[:show, :edit, :update, :destroy ]
+
   def index
     @all_users = User.all
   end
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @new_user.save
-        session[:user_id] = @user_id
+        session[:user_id] = @new_user.id
         format.html { redirect_to @new_user, notice: 'Acount creation was successfull' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -23,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @this_user = User.find(session[:user_id])
+    @this_user = User.find(params[:id])
     @events = @this_user.events
     @attended_events = @this_user.attended_events
     @upcoming_events = @this_user.events.upcoming

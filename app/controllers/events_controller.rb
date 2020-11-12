@@ -2,16 +2,12 @@ class EventsController < ApplicationController
   before_action :set_event, only: %i[show edit update attend_event destroy]
   before_action :require_login, only: %i[new create edit update destroy attend_event]
 
-  # GET /events
-  # GET /events.json
   def index
     @events = Event.all
     @upcoming_events = Event.upcoming
     @past_events = Event.past
   end
 
-  # GET /events/1
-  # GET /events/1.json
   def show
     @attendees = @event.attendees
   end
@@ -21,11 +17,8 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  # GET /events/1/edit
   def edit; end
 
-  # POST /events
-  # POST /events.json
   def create
     @event = current_user.events.build(event_params)
 
@@ -84,6 +77,6 @@ class EventsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:title, :description, :date_time)
+    params.require(:event).permit(:title, :description, :location, :date_time)
   end
 end
