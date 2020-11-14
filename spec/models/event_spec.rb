@@ -29,8 +29,5 @@ RSpec.describe Event, type: :model do
       expect(event.errors.messages[:location]).to eq ["can't be blank"]
       expect(event.errors.messages[:date_time]).to eq ["can't be blank"]
     end
-
-
   end
-  
 end
