@@ -11,9 +11,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'should have unique email and username' do
-      new_user_one = User.create(username: 'name', first_name: 'farst', last_name: 'larst', email: 'myemail@gmail.com')
+      User.create(username: 'name', first_name: 'farst', last_name: 'larst', email: 'myemail@gmail.com')
       new_user_two = User.create(username: 'name', first_name: 'first', last_name: 'last', email: 'myemail@gmail.com')
-      
       expect(new_user_two.errors.messages[:username]).to eq ['has already been taken']
       expect(new_user_two.errors.messages[:email]).to eq ['has already been taken']
     end
