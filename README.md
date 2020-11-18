@@ -10,7 +10,7 @@ This project users to create events and them manage user signups. Users can crea
 - css: for form styling
 - bootstrap 4
 - frameworks: Rails 5.2.3
-- technologies used: Rails testing
+- technologies used: Rspec and Capybara
 
 ### Prerequisites
 ruby version 2.7.0
@@ -44,6 +44,16 @@ Run the following command to run the project
 rails s
 ```  
 6. Open your browser and type: http://localhost:3000/
+
+
+### Testing 
+7. This work include some test. To run the test, make sure tou are in the root directory. 
+``` console
+rspec
+or 
+rspec ./spec/path/to/file
+```
+
 
 ## Author
 
