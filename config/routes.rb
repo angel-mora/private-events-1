@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 root "events#index" 
 resources :users, only: [:new, :create, :show, :edit, :index]
 resources :sessions, only: [:new, :create, :destroy]
-resources :events, only: [:new, :create, :show]
+resources :events, only: [:index, :new, :create, :show]
 get '/login', to: 'sessions#new' 
 get '/sign_up', to: 'users#new' 
 get '/logout', to: 'sessions#destroy'

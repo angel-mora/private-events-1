@@ -1,16 +1,17 @@
 
 <div class="row">
 <div class="col-md-6 offset-md-3 mt-5">
-
-<%= form_with id: 'create-user-form', model: @user do |form|%>
-<h1> Create account </h1>
 <% if @user.errors.any? %>
     <ul>
   <% @user.errors.full_messages.each do |error| %>
-    <li> <%= error%> <li>
+    <li> <%= error %> <li>
   <% end %>
     </ul>
+    <%else%>
+   
 <% end %>
+<%= form_with id: 'create-user-form', model: @user do |form|%>
+<h1> Create account </h1>
 <%= form.text_field :username, placeholder: 'Enter a chosen Username' %>
 <%= form.text_field :first_name, placeholder: 'Enter first name'%>
 <%= form.text_field :last_name, placeholder: 'Enter a last name'%>

@@ -6,7 +6,7 @@ module ApplicationHelper
             <a class=\"menu-item\" href=\"/events\"> <b>See all events</b> </a>
              <a id=\"logout\"  class=\"menu-item\" href=\"/logout\">Logout  </a>".html_safe
     else
-      "<a id=\"login\" class=\"menu-item\" href=\"login\"> Login </a>
+      "<a id=\"login\" class=\"menu-item\" href=\"/login\"> Login </a>
             <a class=\"menu-item\" href=\"/sign_up\">Create account  </a>".html_safe
     end
   end
