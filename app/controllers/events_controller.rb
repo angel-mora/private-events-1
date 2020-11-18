@@ -37,10 +37,10 @@ class EventsController < ApplicationController
     if !already_attendee?
       @event.attendees << current_user
       redirect_back fallback_location: :back
-      flash[:notice] = 'Success!'
+      flash[:notice] = 'Success! you have been registered to attend'
     else
       redirect_back fallback_location: :back
-      flash[:notice] = 'You are already a member. You can only register once!'
+      flash[:notice] = 'You are an attendee. You can only register once!'
     end
   end
 
