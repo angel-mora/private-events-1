@@ -5,7 +5,7 @@ This project users to create events and them manage user signups. Users can crea
 
 ![screenshot](app/assets/images/Screenshot.png)
 
-![YouTube video](https://youtu.be/bivajXGKrKc)
+## (https://youtu.be/bivajXGKrKc)
 
 
 ## Built With
