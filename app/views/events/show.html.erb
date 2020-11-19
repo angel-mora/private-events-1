@@ -1,0 +1,43 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 offset-md-3 mt-5">
+
+<p id="notice"><%= notice %></p>
+<br>
+<hr>
+<p>
+  <h3>Events Creator: <%= @event.creator.username %></h3>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date_time %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+<br>
+<hr>
+<p>
+  <h3>Events Attendees</h3>
+
+  <% @attendees.each do |attendee| %>
+    <%= attendee.username %>
+  <% end %>
+</p>
+
+
+
+<%= link_to 'Back', events_path %>
+
+</ul>
+ <div>
+<div>
+ </div>

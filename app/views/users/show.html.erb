@@ -1,0 +1,70 @@
+<div class="container-fluid">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+    <h2>User Datails:</h2>  
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @this_user.first_name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @this_user.username %> 
+</p>
+
+<br>
+<p>
+    <h3>Created Events:</h3>
+  </p>
+<% @events.each do |event| %>
+  
+  <p>
+    <strong>Description:</strong>
+    <%= event.description %>
+  </p>
+  <p>
+    <strong>Date</strong>
+    <%= event.date_time %>
+  </p>
+  <%= link_to 'Show Event', event_path(event) %><br>
+
+<% end %>
+<hr>
+ 
+
+<div>
+  <h1>Upcoming Events</h1>
+  <div class="grid-container">
+
+  <% @upcoming_events.each do |event| %> 
+  <div class="grid-item">
+    <p> <%= event.description %> </p>
+    <p>Date: <%= event.date_time %> </p>
+  </div>
+  <% end %>
+  
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <h1>Past Events</h1>
+  <div class="grid-container">
+
+  <% @past_events.each do |event| %> 
+  <div class="grid-item">
+    <p> <%= event.description %> </p>
+    <p>Date: <%= event.date_time %> </p>
+  </div>
+  <% end %>
+  
+  </div>
+</div>
+
+
+ </div>

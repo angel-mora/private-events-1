@@ -1,0 +1,14 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 offset-md-3 mt-5">
+<ul class="list-group">
+ <% @all_users.each do |person| %>
+  <li class="list-group-item"> 
+    <%= link_to "#{person.first_name} #{person.last_name}", user_path(person)%> 
+  </li>
+ <% end %>
+
+</ul>
+ <div>
+<div>
+ </div>
